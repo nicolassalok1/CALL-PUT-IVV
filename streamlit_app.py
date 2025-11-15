@@ -208,7 +208,7 @@ with st.sidebar:
     ticker_input = st.text_input("Ticker", value="SPY").strip().upper()
     st.caption(f"Expirations pulled up to {MAX_LOOKAHEAD_YEARS} years ahead.")
     strike_width = st.slider("Strike window around S₀", min_value=50, max_value=200, value=100, step=10)
-    risk_free_rate = st.slider("Risk-free rate r", min_value=-0.01, max_value=0.10, value=0.02, step=0.005)
+    risk_free_rate = st.slider("Risk-free rate r", min_value=0.0, max_value=0.10, value=0.02, step=0.005)
     run_button = st.button("Fetch & Plot")
 
 
